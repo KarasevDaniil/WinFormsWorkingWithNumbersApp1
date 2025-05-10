@@ -30,7 +30,7 @@ namespace WinFormsWorkingWithNumbersApp1
         double answer;
         bool erorrEnterA;
         bool erorrEnterB;
-
+        bool erorrEnterC;
 
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -145,9 +145,9 @@ namespace WinFormsWorkingWithNumbersApp1
                 {
                     c = int.Parse(_c);
                     erorr_C.Text = "";
-
+                    erorrEnterC = false;
                 }
-                catch { erorr_C.Text = "Введите число"; }
+                catch { erorr_C.Text = "Введите число"; erorrEnterC = true; }
             }
         }
 
@@ -159,36 +159,52 @@ namespace WinFormsWorkingWithNumbersApp1
 
         private void buttonAnswer2_Click(object sender, EventArgs e)
         {
-            rez = 0;
-            answ_s = "";
-            answ_string = "";
-            answ.Clear();
+            label4.Text = $"Простые множители числа {c}";
 
-            primeFactors.Clear();
-            while (c > 1)
+            // Для проверки на наличие чисел в полях
+            if (EnterForDecomposition.Text == "введите число") { erorrEnterC = true; }
+
+            if (erorrEnterC != true)
             {
-                if (c % d == 0)
+                erorr_Answ2.Text = "";
+
+                rez = 0;
+                answ_s = "";
+                answ_string = "";
+                answ.Clear();
+
+                primeFactors.Clear();
+                while (c > 1)
                 {
-                    rez = d;
-                    answ.Add(rez.ToString());
-                    c /= d;
-                    d = 2;
+                    if (c % d == 0)
+                    {
+                        rez = d;
+                        answ.Add(rez.ToString());
+                        c /= d;
+                        d = 2;
+                    }
+
+                    else
+                    {
+                        d++;
+                    }
                 }
 
-                else
+                for (int i = 0; i < answ.Count; i++)
                 {
-                    d++;
+                    answ_s = answ[i];
+                    answ_string = answ_string + answ_s + ";";
                 }
+                primeFactors.Text = answ_string;
+
+                
             }
 
-            for (int i = 0; i<answ.Count; i++)
+            else
             {
-                answ_s = answ[i];
-                answ_string = answ_string + answ_s +";";
+                erorr_Answ2.Text = "Введите число";
+                label4.Text = "";
             }
-            primeFactors.Text=answ_string;
-
-
         }
     }
 }

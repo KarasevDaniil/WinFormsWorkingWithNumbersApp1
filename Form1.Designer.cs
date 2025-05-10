@@ -43,6 +43,8 @@
             this.primeFactors = new System.Windows.Forms.TextBox();
             this.buttonAnswer2 = new System.Windows.Forms.Button();
             this.erorr_C = new System.Windows.Forms.Label();
+            this.erorr_Answ2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxA
@@ -178,7 +180,7 @@
             // primeFactors
             // 
             this.primeFactors.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.primeFactors.Location = new System.Drawing.Point(556, 365);
+            this.primeFactors.Location = new System.Drawing.Point(556, 351);
             this.primeFactors.Multiline = true;
             this.primeFactors.Name = "primeFactors";
             this.primeFactors.Size = new System.Drawing.Size(182, 51);
@@ -188,7 +190,7 @@
             // buttonAnswer2
             // 
             this.buttonAnswer2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAnswer2.Location = new System.Drawing.Point(556, 434);
+            this.buttonAnswer2.Location = new System.Drawing.Point(556, 420);
             this.buttonAnswer2.Name = "buttonAnswer2";
             this.buttonAnswer2.Size = new System.Drawing.Size(182, 34);
             this.buttonAnswer2.TabIndex = 14;
@@ -206,11 +208,32 @@
             this.erorr_C.Size = new System.Drawing.Size(0, 20);
             this.erorr_C.TabIndex = 15;
             // 
+            // erorr_Answ2
+            // 
+            this.erorr_Answ2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.erorr_Answ2.ForeColor = System.Drawing.Color.Red;
+            this.erorr_Answ2.Location = new System.Drawing.Point(572, 466);
+            this.erorr_Answ2.Name = "erorr_Answ2";
+            this.erorr_Answ2.Size = new System.Drawing.Size(152, 18);
+            this.erorr_Answ2.TabIndex = 16;
+            this.erorr_Answ2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(312, 351);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(237, 75);
+            this.label4.TabIndex = 17;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 484);
+            this.ClientSize = new System.Drawing.Size(803, 508);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.erorr_Answ2);
             this.Controls.Add(this.erorr_C);
             this.Controls.Add(this.buttonAnswer2);
             this.Controls.Add(this.primeFactors);
@@ -250,6 +273,8 @@
         private System.Windows.Forms.TextBox primeFactors;
         private System.Windows.Forms.Button buttonAnswer2;
         private System.Windows.Forms.Label erorr_C;
+        private System.Windows.Forms.Label erorr_Answ2;
+        private System.Windows.Forms.Label label4;
     }
 }
 
