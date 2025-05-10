@@ -21,9 +21,16 @@ namespace WinFormsWorkingWithNumbersApp1
         string _arithmeticOperator;
         double a;
         double b;
+        int c;
+        int d = 2;
+        List<string> answ = new List<string>();
+        int rez;
+        string answ_s;
+        string answ_string;
         double answer;
         bool erorrEnterA;
         bool erorrEnterB;
+
 
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -124,6 +131,63 @@ namespace WinFormsWorkingWithNumbersApp1
             {
                 erorr_Answ.Text = "Выберите арифметическое действие";
             }
+
+        }
+
+        // Разложение на простые множители
+
+        public void EnterForDecomposition_TextChanged(object sender, EventArgs e)
+        {
+            string _c = EnterForDecomposition.Text;
+            if (EnterForDecomposition.Text != "")
+            {
+                try
+                {
+                    c = int.Parse(_c);
+                    erorr_C.Text = "";
+
+                }
+                catch { erorr_C.Text = "Введите число"; }
+            }
+        }
+
+        private void EnterForDecomposition_Click(object sender, EventArgs e)
+        {
+            if (EnterForDecomposition.Text == "введите число")
+                EnterForDecomposition.Clear();
+        }
+
+        private void buttonAnswer2_Click(object sender, EventArgs e)
+        {
+            rez = 0;
+            answ_s = "";
+            answ_string = "";
+            answ.Clear();
+
+            primeFactors.Clear();
+            while (c > 1)
+            {
+                if (c % d == 0)
+                {
+                    rez = d;
+                    answ.Add(rez.ToString());
+                    c /= d;
+                    d = 2;
+                }
+
+                else
+                {
+                    d++;
+                }
+            }
+
+            for (int i = 0; i<answ.Count; i++)
+            {
+                answ_s = answ[i];
+                answ_string = answ_string + answ_s +";";
+            }
+            primeFactors.Text=answ_string;
+
 
         }
     }

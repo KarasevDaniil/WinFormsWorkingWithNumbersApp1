@@ -38,6 +38,11 @@
             this.erorr_A = new System.Windows.Forms.Label();
             this.erorr_B = new System.Windows.Forms.Label();
             this.erorr_Answ = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.EnterForDecomposition = new System.Windows.Forms.TextBox();
+            this.primeFactors = new System.Windows.Forms.TextBox();
+            this.buttonAnswer2 = new System.Windows.Forms.Button();
+            this.erorr_C = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxA
@@ -148,11 +153,69 @@
             this.erorr_Answ.TabIndex = 10;
             this.erorr_Answ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(35, 303);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(398, 25);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Разложить число на простые множители";
+            // 
+            // EnterForDecomposition
+            // 
+            this.EnterForDecomposition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EnterForDecomposition.Location = new System.Drawing.Point(57, 372);
+            this.EnterForDecomposition.Name = "EnterForDecomposition";
+            this.EnterForDecomposition.Size = new System.Drawing.Size(144, 30);
+            this.EnterForDecomposition.TabIndex = 12;
+            this.EnterForDecomposition.Text = "введите число";
+            this.EnterForDecomposition.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.EnterForDecomposition.Click += new System.EventHandler(this.EnterForDecomposition_Click);
+            this.EnterForDecomposition.TextChanged += new System.EventHandler(this.EnterForDecomposition_TextChanged);
+            // 
+            // primeFactors
+            // 
+            this.primeFactors.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.primeFactors.Location = new System.Drawing.Point(556, 365);
+            this.primeFactors.Multiline = true;
+            this.primeFactors.Name = "primeFactors";
+            this.primeFactors.Size = new System.Drawing.Size(182, 51);
+            this.primeFactors.TabIndex = 13;
+            this.primeFactors.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // buttonAnswer2
+            // 
+            this.buttonAnswer2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAnswer2.Location = new System.Drawing.Point(556, 434);
+            this.buttonAnswer2.Name = "buttonAnswer2";
+            this.buttonAnswer2.Size = new System.Drawing.Size(182, 34);
+            this.buttonAnswer2.TabIndex = 14;
+            this.buttonAnswer2.Text = "Получить ответ";
+            this.buttonAnswer2.UseVisualStyleBackColor = true;
+            this.buttonAnswer2.Click += new System.EventHandler(this.buttonAnswer2_Click);
+            // 
+            // erorr_C
+            // 
+            this.erorr_C.AutoSize = true;
+            this.erorr_C.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.erorr_C.ForeColor = System.Drawing.Color.Red;
+            this.erorr_C.Location = new System.Drawing.Point(53, 421);
+            this.erorr_C.Name = "erorr_C";
+            this.erorr_C.Size = new System.Drawing.Size(0, 20);
+            this.erorr_C.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(799, 484);
+            this.Controls.Add(this.erorr_C);
+            this.Controls.Add(this.buttonAnswer2);
+            this.Controls.Add(this.primeFactors);
+            this.Controls.Add(this.EnterForDecomposition);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.erorr_Answ);
             this.Controls.Add(this.erorr_B);
             this.Controls.Add(this.erorr_A);
@@ -182,6 +245,11 @@
         private System.Windows.Forms.Label erorr_A;
         private System.Windows.Forms.Label erorr_B;
         private System.Windows.Forms.Label erorr_Answ;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox EnterForDecomposition;
+        private System.Windows.Forms.TextBox primeFactors;
+        private System.Windows.Forms.Button buttonAnswer2;
+        private System.Windows.Forms.Label erorr_C;
     }
 }
 
